@@ -4,29 +4,23 @@
     <meta charset="UTF-8">
     <title>Nested HTML Tables</title>
     <style>
-        table {
+        table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
+        }
+
+        table {
             width: 100%;
         }
 
         th, td {
-            border: 1px solid black;
             padding: 8px;
             text-align: center;
-            vertical-align: top;
         }
 
         .black-cell {
             background-color: black;
             color: white;
-            font-weight: bold;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-            text-align: left;
         }
     </style>
 </head>
@@ -34,47 +28,36 @@
 
 <table>
     <tr>
-        <!-- Nested Table 1 -->
         <td>
             <table>
                 <tr>
-                    <th colspan="2">Nested Table 1</th>
-                </tr>
-                <tr>
-                    <td>Column 1</td>
-                    <td>Column 2</td>
-                </tr>
-            </table>
-        </td>
-
-        <!-- Nested Table 2 -->
-        <td>
-            <table>
-                <tr>
-                    <th colspan="2">Nested Table 2</th>
-                </tr>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-
-    <tr>
-        <!-- Nested Table 3 with List -->
-        <td>
-            <table>
-                <tr>
-                    <th>Nested Table 3</th>
+                    <th>Nested Table 2</th>
                 </tr>
                 <tr>
                     <td>
-                        <ul>
+                        <table>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            <tr>
+                                <td>Data</td>
+                                <td>Data</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+
+        <td>
+            <table>
+                <tr>
+                    <th>Nested Table 1</th>
+                </tr>
+                <tr>
+                    <td>
+						<ul>
                             <li>List item 1</li>
                             <li>List item 2</li>
                             <li>List item 3</li>
@@ -83,8 +66,31 @@
                 </tr>
             </table>
         </td>
+    </tr>
 
-        <!-- Nested Table 4 with Black Cell -->
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <th>Nested Table 3</th>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            <tr>
+                                <td>Data</td>
+                                <td>Data</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+
         <td>
             <table>
                 <tr>
